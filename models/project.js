@@ -1,14 +1,15 @@
 "use strinct";
 
 var mongoose = require("mongoose");
-var schema = mongoose.schema;
+var schema = mongoose.Schema;
 
 var ProjectShema = schema({
   name: String,
   description: String,
   year: Number,
   category: String,
-  langs: [String, String, String],
+  langs: String,
+  image: String,
 });
 
 module.exports = mongoose.model("Project", ProjectShema);
