@@ -1,6 +1,7 @@
 "use strict";
 
 var expres = require("express");
+var cors = require("cors");
 var bodyParser = require("body-parser");
 
 var app = expres();
@@ -11,6 +12,7 @@ var projectRoutes = require("./routes/project");
 // Midleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 // CORS
 
@@ -18,7 +20,7 @@ app.use(bodyParser.json());
 // Esta es la forma de usar rutas con controlador
 app.use("/api", projectRoutes);
 
-/* ******************** Este metodo es cuando no se tiene conotrlador y se hace dirextamente aqui
+/* ******************** Este metodo es cuando no se tiene conotrlador y se hace directamente aqui
 app.get("/test", (req, res) => {
   res.status(200).send({
     message: "Hola mundo desde mi API de NodeJs",

@@ -9,7 +9,8 @@ mongoose
   .then(() => {
     console.log("Conexión a mongo establecida con exito");
 
-    // creación del servidor
+    // creación del servidor de NodeJs, luego de haber conectado con 
+    // mongo DB
     app.listen(port, () => {
       console.log(
         "Servidor corriendo correctamente en la url localhost:" + port

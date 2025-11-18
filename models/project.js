@@ -1,8 +1,8 @@
-"use strinct";
+"use strict";
 
 var mongoose = require("mongoose");
 var schema = mongoose.Schema;
-
+ 
 var ProjectShema = schema({
   name: String,
   description: String,
